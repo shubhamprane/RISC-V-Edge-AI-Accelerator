@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr 24 19:12:07 2026
+# Process ID         : 13260
+# Current directory  : C:/Users/Shubham/Downloads/benchmark/benchmark
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/tb_coprocessor_snap/xsim_script.tcl}
+# Log file           : C:/Users/Shubham/Downloads/benchmark/benchmark/xsim.log
+# Journal file       : C:/Users/Shubham/Downloads/benchmark/benchmark\xsim.jou
+# Running On         : LAPTOP-M62A9LSC
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13450HX
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 25463 MB
+# Swap memory        : 4919 MB
+# Total Virtual      : 30382 MB
+# Available Virtual  : 3607 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_coprocessor_snap/xsim_script.tcl
+# xsim {tb_coprocessor_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: File input.mem referenced on C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v at line 51 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+COP: RESET
+COP: RESET
+COP: RESET
+COP: START Layer 1 at time               105000
+COP: Transition S_IDLE -> S_BIAS_LOAD
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             11955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         4
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             23855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             35755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        12
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             47655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        16
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             59555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        20
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             71455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        24
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             83355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        28
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             95255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        32
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            107155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        36
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            119055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        40
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            130955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        44
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            142855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        48
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            154755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        52
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            166655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        56
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            178555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        60
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            190455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        64
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            202355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        68
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            214255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        72
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            226155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        76
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            238055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        80
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            249955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        84
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            261855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        88
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            273755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        92
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            285655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        96
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            297555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       100
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            309455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       104
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            321355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       108
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            333255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       112
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            345155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       116
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            357055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       120
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            368955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       124
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            380855000
+COP: Layer 1 COMPLETE, transition to S_SCALE_ADDR
+COP: Scaling COMPLETE, transition to S_L2_SETUP
+COP: START Layer 2
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            386765000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         4
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            388825000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            390885000
+COP: Layer 2 COMPLETE, transition to S_ARGMAX_PREP
+COP: Transition S_ARGMAX_PREP -> S_ARGMAX
+COP: ALL COMPLETE, winner= 9, score=          x
+PASS: Coprocessor Top (class_index= 9, max_score=          x)
+$finish called at time : 391205 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_coprocessor.v" Line 67
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:12:11 2026...

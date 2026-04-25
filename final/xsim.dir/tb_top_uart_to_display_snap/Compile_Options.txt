@@ -1,0 +1,1 @@
+-debug "typical" "tb_top_uart_to_display" -s "tb_top_uart_to_display_snap" 

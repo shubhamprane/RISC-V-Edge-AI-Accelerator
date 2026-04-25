@@ -1,0 +1,1 @@
+-debug "typical" "tb_coprocessor" -s "tb_coprocessor_snap" 

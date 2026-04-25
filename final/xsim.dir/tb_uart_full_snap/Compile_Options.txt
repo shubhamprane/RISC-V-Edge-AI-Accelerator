@@ -1,0 +1,1 @@
+-debug "typical" "tb_uart_full" -s "tb_uart_full_snap" 

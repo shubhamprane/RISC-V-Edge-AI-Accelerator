@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_top_uart_to_display_snap/xsimk.exe -runall -simmode gui -wdb tb_top_uart_to_display_snap.wdb -simrunnum 0 -socket 64762
+Design successfully loaded
+Design Loading Memory Usage: 10956 KB (Peak: 10956 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 12204 KB (Peak: 12204 KB)
+Simulation CPU Usage: 1187 ms

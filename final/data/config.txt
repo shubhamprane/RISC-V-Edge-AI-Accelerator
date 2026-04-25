@@ -1,0 +1,10 @@
+hidden=128
+l1_rows=128
+l1_cols=784
+l2_rows=10
+l2_cols=128
+l2_wt_base=25088
+l2_bias_base=128
+inter_shift=11
+w1_scale=32
+w2_scale=64

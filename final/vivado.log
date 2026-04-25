@@ -1,0 +1,2260 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr 24 19:11:31 2026
+# Process ID         : 32788
+# Current directory  : C:/Users/Shubham/Downloads/benchmark/benchmark
+# Command line       : vivado.exe -mode batch -source vivado_build.tcl
+# Log file           : C:/Users/Shubham/Downloads/benchmark/benchmark/vivado.log
+# Journal file       : C:/Users/Shubham/Downloads/benchmark/benchmark\vivado.jou
+# Running On         : LAPTOP-M62A9LSC
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13450HX
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 25463 MB
+# Swap memory        : 4919 MB
+# Total Virtual      : 30382 MB
+# Available Virtual  : 4235 MB
+#-----------------------------------------------------------
+source vivado_build.tcl
+# create_project -in_memory -part xc7a100tcsg324-1
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 524.887 ; gain = 218.184
+# read_verilog [glob rtl/core/*.v]
+# read_verilog [glob rtl/coprocessor/*.v]
+# read_verilog [glob rtl/memory/*.v]
+# read_verilog [glob rtl/top/*.v]
+# set_property include_dirs {rtl/core} [current_fileset]
+# read_xdc constraints/nexys_a7.xdc
+# puts "=== Running unit testbenches ==="
+=== Running unit testbenches ===
+# proc run_tb {tb_name tb_file} {
+#     set all_rtl [concat [glob rtl/core/*.v] [glob rtl/coprocessor/*.v] \
+#                         [glob rtl/memory/*.v] [glob rtl/top/*.v]]
+#     set src_list [concat $all_rtl [list $tb_file]]
+#     set rc1 [catch {exec xvlog -sv {*}$src_list} out1]
+#     puts $out1
+#     if {$rc1 != 0} { puts "COMPILE FAIL: $tb_name"; return 1 }
+#     set rc2 [catch {exec xelab -debug typical $tb_name -s ${tb_name}_snap} out2]
+#     puts $out2
+#     if {$rc2 != 0} { puts "ELAB FAIL: $tb_name"; return 1 }
+#     set rc3 [catch {exec xsim ${tb_name}_snap -R} out3]
+#     puts $out3
+#     if {[string match "*FAIL*" $out3]} { puts "SIM FAIL: $tb_name"; return 1 }
+#     puts "PASS: $tb_name"
+#     return 0
+# }
+# set fail 0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_pe.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_pe
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_pe -s tb_pe_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.pe
+Compiling module work.tb_pe
+Built simulation snapshot tb_pe_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:11:41 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pe_snap/xsim_script.tcl
+# xsim {tb_pe_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: PE Test 1 (acc=60)
+PASS: PE Test 2 (flush)
+PASS: PE Test 3 (acc=-15)
+$finish called at time : 166 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_pe.v" Line 53
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:11:44 2026...
+PASS: tb_pe
+# set fail [expr $fail + [run_tb tb_pe               tb_pe.v]]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_argmax.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_argmax
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_argmax -s tb_argmax_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.argmax_unit_default
+Compiling module work.tb_argmax
+Built simulation snapshot tb_argmax_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:11:47 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_argmax_snap/xsim_script.tcl
+# xsim {tb_argmax_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: Argmax Test 1 (winner=7, val=500)
+PASS: Argmax Test 2 (winner=3, val=-1)
+PASS: Argmax Test 3 (winner=0, val=100)
+$finish called at time : 306 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_argmax.v" Line 59
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:11:50 2026...
+PASS: tb_argmax
+# set fail [expr $fail + [run_tb tb_argmax           tb_argmax.v]]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_systolic_corrected.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_systolic_corrected
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_systolic_corrected -s tb_systolic_corrected_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.pe
+Compiling module work.systolic_array(ROWS=4,COLS=4)
+Compiling module work.tb_systolic_corrected
+Built simulation snapshot tb_systolic_corrected_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:11:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_systolic_corrected_snap/xsim_script.tcl
+# xsim {tb_systolic_corrected_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: Systolic Corrected (Row0=152)
+$finish called at time : 146 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_systolic_corrected.v" Line 52
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:11:56 2026...
+PASS: tb_systolic_corrected
+# set fail [expr $fail + [run_tb tb_systolic_corrected tb_systolic_corrected.v]]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_uart_full.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_uart_full
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_uart_full -s tb_uart_full_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.uart_rx(BAUD_RATE=1000000)
+Compiling module work.uart_input_buffer
+Compiling module work.tb_uart_full
+Built simulation snapshot tb_uart_full_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:11:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_uart_full_snap/xsim_script.tcl
+# xsim {tb_uart_full_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Starting UART Full Test...
+Sending 784 bytes at 1M baud...
+PASS: UART Full (buf_ready fired)
+$finish called at time : 7839345 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_uart_full.v" Line 67
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:12:03 2026...
+PASS: tb_uart_full
+# set fail [expr $fail + [run_tb tb_uart_full        tb_uart_full.v]]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_coprocessor.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_coprocessor
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_coprocessor -s tb_coprocessor_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.input_bram
+Compiling module work.weight_bram
+Compiling module work.bias_bram
+Compiling module work.output_bram
+Compiling module work.pe
+Compiling module work.systolic_array(ROWS=4,COLS=4)
+Compiling module work.argmax_unit_default
+Compiling module work.coprocessor_top(ROWS=4,COLS=4)
+Compiling module work.tb_coprocessor
+Built simulation snapshot tb_coprocessor_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:12:07 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_coprocessor_snap/xsim_script.tcl
+# xsim {tb_coprocessor_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: File input.mem referenced on C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v at line 51 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+COP: RESET
+COP: RESET
+COP: RESET
+COP: START Layer 1 at time               105000
+COP: Transition S_IDLE -> S_BIAS_LOAD
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             11955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         4
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             23855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             35755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        12
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             47655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        16
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             59555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        20
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             71455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        24
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             83355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        28
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time             95255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        32
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            107155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        36
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            119055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        40
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            130955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        44
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            142855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        48
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            154755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        52
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            166655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        56
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            178555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        60
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            190455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        64
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            202355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        68
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            214255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        72
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            226155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        76
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            238055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        80
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            249955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        84
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            261855000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        88
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            273755000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        92
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            285655000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        96
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            297555000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       100
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            309455000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       104
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            321355000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       108
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            333255000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       112
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            345155000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       116
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            357055000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       120
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            368955000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       124
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       195
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            380855000
+COP: Layer 1 COMPLETE, transition to S_SCALE_ADDR
+COP: Scaling COMPLETE, transition to S_L2_SETUP
+COP: START Layer 2
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            386765000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         4
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            388825000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        31
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            390885000
+COP: Layer 2 COMPLETE, transition to S_ARGMAX_PREP
+COP: Transition S_ARGMAX_PREP -> S_ARGMAX
+COP: ALL COMPLETE, winner= 9, score=          x
+PASS: Coprocessor Top (class_index= 9, max_score=          x)
+$finish called at time : 391205 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_coprocessor.v" Line 67
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:12:11 2026...
+PASS: tb_coprocessor
+# set fail [expr $fail + [run_tb tb_coprocessor      tb_coprocessor.v]]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_top_uart_to_display.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_top_uart_to_display
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:\AMDee\2025.2\Vivado\bin\unwrapped\win64.o\xelab.exe -debug typical tb_top_uart_to_display -s tb_top_uart_to_display_snap 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'tx' remains unconnected for this instance [C:/Users/Shubham/Downloads/benchmark/benchmark/tb_top_uart_to_display.v:11]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.uart_rx(BAUD_RATE=1000000)
+Compiling module work.uart_input_buffer
+Compiling module work.id_ex_reg
+Compiling module work.IF_ID
+Compiling module work.ex_mem_wb_reg
+Compiling module work.execute
+Compiling module work.wb
+Compiling module work.pipe
+Compiling module work.instr_mem
+Compiling module work.data_mem
+Compiling module work.input_bram
+Compiling module work.weight_bram
+Compiling module work.bias_bram
+Compiling module work.output_bram
+Compiling module work.pe
+Compiling module work.systolic_array_default
+Compiling module work.argmax_unit_default
+Compiling module work.coprocessor_top
+Compiling module work.uart_tx(CLK_FREQ=10000000)
+Compiling module work.led_controller
+Compiling module work.seven_seg_controller
+Compiling module work.top_fpga
+Compiling module work.tb_top_uart_to_display
+Built simulation snapshot tb_top_uart_to_display_snap
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 24 19:12:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_top_uart_to_display_snap/xsim_script.tcl
+# xsim {tb_top_uart_to_display_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: File input.mem referenced on C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v at line 51 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+COP: RESET
+Sending 784 bytes via UART...
+COP: START Layer 1 at time              4345000
+COP: Transition S_IDLE -> S_BIAS_LOAD
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            182045000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            360645000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        16
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            539245000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        24
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            717845000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        32
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time            896445000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        40
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1075045000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        48
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1253645000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        56
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1432245000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        64
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1610845000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        72
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1789445000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        80
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           1968045000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        88
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2146645000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        96
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2325245000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       104
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2503845000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       112
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2682445000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       120
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2861045000
+COP: Layer 1 COMPLETE, transition to S_SCALE_ADDR
+COP: Scaling COMPLETE, transition to S_L2_SETUP
+COP: START Layer 2
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        30
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2930545000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        30
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           2961545000
+COP: Layer 2 COMPLETE, transition to S_ARGMAX_PREP
+COP: Transition S_ARGMAX_PREP -> S_ARGMAX
+COP: ALL COMPLETE, winner= 9, score=          x
+COP: START Layer 1 at time           7526445000
+COP: Transition S_IDLE -> S_BIAS_LOAD
+UART Transmission complete. Waiting for inference...
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           7704145000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           7882745000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        16
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8061345000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        24
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8239945000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        32
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8418545000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        40
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8597145000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        48
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8775745000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        56
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           8954345000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        64
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           9132945000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        72
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           9311545000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        80
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           9490145000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        88
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           9668745000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=        96
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time           9847345000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       104
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time          10025945000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       112
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time          10204545000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=       120
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=       194
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time          10383145000
+COP: Layer 1 COMPLETE, transition to S_SCALE_ADDR
+COP: Scaling COMPLETE, transition to S_L2_SETUP
+COP: START Layer 2
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         0
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        30
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time          10452645000
+COP: Transition S_BIAS_LOAD -> S_TILE_LOAD, row_tile=         8
+COP: Transition S_TILE_LOAD -> S_COLLECT_WAIT, col_tile=        30
+COP: Transition S_COLLECT_WAIT -> S_COLLECT_WRITE at time          10483645000
+COP: Layer 2 COMPLETE, transition to S_ARGMAX_PREP
+COP: Transition S_ARGMAX_PREP -> S_ARGMAX
+COP: ALL COMPLETE, winner= 9, score=          x
+Inference Complete!
+Class Index:  9
+Max Score:           x
+PASS: Display Active (anode=fe)
+$finish called at time : 16000105 ns : File "C:/Users/Shubham/Downloads/benchmark/benchmark/tb_top_uart_to_display.v" Line 70
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Apr 24 19:12:21 2026...
+PASS: tb_top_uart_to_display
+# set fail [expr $fail + [run_tb tb_top_uart_to_display tb_top_uart_to_display.v]]
+# if {$fail > 0} {
+#     puts "ERROR: $fail testbench(es) failed. Aborting synthesis."
+#     exit 1
+# }
+# puts "=== All testbenches PASSED. Proceeding to synthesis... ==="
+=== All testbenches PASSED. Proceeding to synthesis... ===
+# synth_design -top top_fpga -part xc7a100tcsg324-1
+Command: synth_design -top top_fpga -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27428
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1271.438 ; gain = 540.559
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 'DIVISOR' becomes localparam in 'top_fpga' with formal parameter declaration list [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v:22]
+INFO: [Synth 8-6157] synthesizing module 'top_fpga' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_rx.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_input_buffer' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_input_buffer' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_input_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipe' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v:3]
+INFO: [Synth 8-6157] synthesizing module 'id_ex_reg' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v:232]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex_reg' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v:232]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/IF_ID.v:3]
+INFO: [Synth 8-6157] synthesizing module 'execute' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v:4]
+INFO: [Synth 8-226] default block is never used [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v:197]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem_wb_reg' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem_wb_reg' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'execute' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/execute.v:4]
+INFO: [Synth 8-6157] synthesizing module 'wb' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'wb' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/wb.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pipe' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/pipeline.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instr_mem' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:5]
+INFO: [Synth 8-3876] $readmem data file 'imem.hex' is read successfully [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'instr_mem' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:5]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:28]
+INFO: [Synth 8-3876] $readmem data file 'dmem.hex' is read successfully [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/core/memory.v:28]
+INFO: [Synth 8-6157] synthesizing module 'coprocessor_top' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'input_bram' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v:2]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'input.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'input_bram' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/input_bram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v:2]
+INFO: [Synth 8-3876] $readmem data file 'weights.mem' is read successfully [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/weight_bram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'bias_bram' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v:2]
+INFO: [Synth 8-3876] $readmem data file 'bias.mem' is read successfully [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'bias_bram' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/bias_bram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'output_bram' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'output_bram' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/memory/output_bram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'systolic_array' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v:3]
+	Parameter ROWS bound to: 8 - type: integer 
+	Parameter COLS bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pe' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pe' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'systolic_array' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/systolic_array.v:3]
+INFO: [Synth 8-6157] synthesizing module 'argmax_unit' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v:3]
+	Parameter N bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'argmax_unit' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/argmax_unit.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'coprocessor_top' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v:190]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v:3]
+	Parameter CLK_FREQ bound to: 10000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/uart_tx.v:3]
+INFO: [Synth 8-6157] synthesizing module 'led_controller' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'led_controller' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/led_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_controller' [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_controller' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/seven_seg_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_fpga' (0#1) [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v:3]
+WARNING: [Synth 8-7137] Register w_reg_reg in module pe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/pe.v:17]
+WARNING: [Synth 8-6014] Unused sequential element prev_r_reg was removed.  [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:248]
+WARNING: [Synth 8-6014] Unused sequential element prev_w_reg was removed.  [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:249]
+WARNING: [Synth 8-7137] Register is_cpu_trigger_reg in module coprocessor_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/coprocessor/coprocessor_top.v:140]
+WARNING: [Synth 8-7137] Register log_word_reg in module top_fpga has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shubham/Downloads/benchmark/benchmark/rtl/top/top_fpga.v:230]
+WARNING: [Synth 8-7129] Port cop_addr[23] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[22] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[21] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[20] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[19] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[18] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[17] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[16] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[15] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[14] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[13] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cop_addr[12] in module coprocessor_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[31] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[30] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[29] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[28] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[27] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[26] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[25] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[24] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[23] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[22] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[21] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[20] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[19] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[18] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[17] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[16] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[1] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[0] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[31] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[30] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[29] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[28] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[27] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[26] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[25] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[24] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[23] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[22] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[21] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[20] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[19] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[18] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[17] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[16] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[1] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port waddr[0] in module data_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[31] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[30] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[29] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[28] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[27] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[26] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[25] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[24] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[23] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[22] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[21] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[20] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[19] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[18] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[17] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[16] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[1] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[0] in module instr_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stall in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_mem_is_valid in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_stall in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_alu_to_reg in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_mem_to_reg in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dest_reg_sel[4] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dest_reg_sel[3] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dest_reg_sel[2] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dest_reg_sel[1] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dest_reg_sel[0] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[31] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[30] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[29] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[28] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[27] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[26] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[25] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[24] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[23] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[22] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[21] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[20] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[19] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[18] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[17] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[16] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[15] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[14] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[13] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[12] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[11] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[10] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[9] in module IF_ID is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_result[8] in module IF_ID is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1461.461 ; gain = 730.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1461.461 ; gain = 730.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1461.461 ; gain = 730.582
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.192 . Memory (MB): peak = 1461.461 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Shubham/Downloads/benchmark/benchmark/constraints/nexys_a7.xdc]
+Finished Parsing XDC File [C:/Users/Shubham/Downloads/benchmark/benchmark/constraints/nexys_a7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Shubham/Downloads/benchmark/benchmark/constraints/nexys_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_fpga_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_fpga_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1549.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1549.297 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1549.297 ; gain = 818.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1549.297 ; gain = 818.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1549.297 ; gain = 818.418
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'coprocessor_top'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'log_state_reg' in module 'top_fpga'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                 S_START |                               01 |                               01
+                  S_DATA |                               10 |                               10
+                  S_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                      00000000001 |                             0000
+             S_BIAS_LOAD |                      00000000010 |                             0001
+             S_TILE_LOAD |                      00000000100 |                             0010
+          S_COLLECT_WAIT |                      00000001000 |                             0011
+         S_COLLECT_WRITE |                      00000010000 |                             0100
+            S_SCALE_ADDR |                      00000100000 |                             0111
+            S_SCALE_WAIT |                      00001000000 |                             1000
+            S_SCALE_PROC |                      00010000000 |                             1001
+              S_L2_SETUP |                      00100000000 |                             1010
+           S_ARGMAX_PREP |                      01000000000 |                             0101
+                S_ARGMAX |                      10000000000 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'coprocessor_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                 S_START |                               01 |                               01
+                  S_DATA |                               10 |                               10
+                  S_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                              000 |                              000
+                 iSTATE2 |                              001 |                              101
+                  iSTATE |                              010 |                              110
+                 iSTATE4 |                              011 |                              001
+                 iSTATE0 |                              100 |                              010
+                 iSTATE3 |                              101 |                              011
+                 iSTATE1 |                              110 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'log_state_reg' using encoding 'sequential' in module 'top_fpga'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1549.297 ; gain = 818.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 4     
+	   2 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 12    
+	   3 Input   32 Bit       Adders := 1     
+	   9 Input   32 Bit       Adders := 8     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 4     
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              512 Bit    Registers := 1     
+	              320 Bit    Registers := 1     
+	              256 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 150   
+	               31 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 76    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 49    
++---RAMs : 
+	            1024K Bit	(32768 X 32 bit)          RAMs := 1     
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
+	               8K Bit	(256 X 32 bit)          RAMs := 3     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 3     
+	  11 Input  512 Bit        Muxes := 1     
+	   2 Input  320 Bit        Muxes := 1     
+	  11 Input  320 Bit        Muxes := 1     
+	   2 Input  256 Bit        Muxes := 1     
+	  11 Input  256 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 1     
+	  11 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 115   
+	   6 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 4     
+	  11 Input   32 Bit        Muxes := 8     
+	   2 Input   24 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 72    
+	  11 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	  11 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 5     
+	   7 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	  11 Input    2 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 137   
+	   4 Input    1 Bit        Muxes := 13    
+	  13 Input    1 Bit        Muxes := 11    
+	  11 Input    1 Bit        Muxes := 25    
+	   3 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3971] The signal "cop_u/u_in_bram/ram_reg" was recognized as a true dual port RAM template.
+DSP Report: Generating DSP wt_raddr0, operation Mode is: C+(D+A)*B+CarryIn.
+DSP Report: operator wt_raddr0 is absorbed into DSP wt_raddr0.
+DSP Report: operator wt_raddr3 is absorbed into DSP wt_raddr0.
+DSP Report: operator wt_raddr4 is absorbed into DSP wt_raddr0.
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_fpga has port seg_anode[1] driven by constant 1
+INFO: [Synth 8-3971] The signal "cop_u/u_in_bram/ram_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "top_fpga/DMEM/dmem_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "top_fpga/DMEM/dmem_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "top_fpga/DMEM/dmem_reg",trying to implement using LUTRAM
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "top_fpga/DMEM/dmem_reg",trying to implement using LUTRAM
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:05 . Memory (MB): peak = 1825.695 ; gain = 1094.816
+---------------------------------------------------------------------------------
+ Sort Area is  wt_raddr0_0 : 0 0 : 1755 1755 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|weight_bram: | ram_reg            | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|bias_bram:   | ram_reg            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|cop_u        | u_out_bram/ram_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|cop_u        | u_in_bram/ram_reg  | 256 x 32(NO_CHANGE)    | W |   | 256 x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 1      | 
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives        | 
++------------+---------------+-----------+----------------------+-------------------+
+|top_fpga    | DMEM/dmem_reg | Implied   | 16 K x 32            | RAM128X1D x 4096  | 
++------------+---------------+-----------+----------------------+-------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|coprocessor_top | C+(D+A)*B+CarryIn | 5      | 15     | 15     | 15     | 15     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
++----------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:13 . Memory (MB): peak = 1860.699 ; gain = 1129.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+      : cop_u/i_7/cop_re
+      : cop_u/cop_re
+      : i_5/cop_re
+      : i_5/dmem_read_address[22]
+      : pipe_u/dmem_read_address[30]
+      : pipe_u/i_1/dmem_read_address[22]
+      : pipe_u/i_1/wb_read_data_o[28]
+      : pipe_u/wb_stage/wb_read_data_o[28]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[28]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[23]
+      : pipe_u/wb_stage/dmem_read_data_i[23]
+      : pipe_u/dmem_read_data_temp[23]
+      : i_5/dmem_read_data_temp[23]
+      : i_5/I222[23]
+      : cop_u/cop_rdata[23]
+      : cop_u/i_7/cop_rdata[23]
+      : pipe_u/i_1/wb_read_data_o[0]
+      : pipe_u/wb_stage/wb_read_data_o[0]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[0]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[0]
+      : pipe_u/wb_stage/dmem_read_data_i[0]
+      : pipe_u/dmem_read_data_temp[0]
+      : i_5/dmem_read_data_temp[0]
+      : i_5/I222[0]
+      : cop_u/cop_rdata[0]
+      : cop_u/i_7/cop_rdata[0]
+      : cop_u/i_7/cop_addr[1]
+      : cop_u/cop_addr[1]
+      : i_5/cop_addr[1]
+      : i_5/dmem_read_address[1]
+      : pipe_u/dmem_read_address[1]
+      : pipe_u/i_1/dmem_read_address[1]
+      : pipe_u/i_1/wb_read_data_o[4]
+      : pipe_u/wb_stage/wb_read_data_o[4]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[4]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[4]
+      : pipe_u/wb_stage/dmem_read_data_i[4]
+      : pipe_u/dmem_read_data_temp[4]
+      : i_5/dmem_read_data_temp[4]
+      : i_5/I222[4]
+      : cop_u/cop_rdata[4]
+      : cop_u/i_7/cop_rdata[4]
+      : pipe_u/i_1/wb_read_data_o[1]
+      : pipe_u/wb_stage/wb_read_data_o[1]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[1]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[1]
+      : pipe_u/wb_stage/dmem_read_data_i[1]
+      : pipe_u/dmem_read_data_temp[1]
+      : i_5/dmem_read_data_temp[1]
+      : i_5/I222[1]
+      : cop_u/cop_rdata[1]
+      : cop_u/i_7/cop_rdata[1]
+      : cop_u/i_7/cop_addr[4]
+      : cop_u/cop_addr[4]
+      : i_5/cop_addr[4]
+      : i_5/dmem_read_address[4]
+      : pipe_u/dmem_read_address[4]
+      : pipe_u/i_1/dmem_read_address[4]
+      : cop_u/i_7/cop_addr[5]
+      : cop_u/cop_addr[5]
+      : i_5/cop_addr[5]
+      : i_5/dmem_read_address[5]
+      : pipe_u/dmem_read_address[5]
+      : pipe_u/i_1/dmem_read_address[5]
+      : cop_u/i_7/cop_addr[4]
+      : cop_u/cop_addr[4]
+      : i_5/cop_addr[4]
+      : i_5/dmem_read_address[4]
+      : pipe_u/dmem_read_address[4]
+      : pipe_u/i_1/dmem_read_address[4]
+      : cop_u/i_7/cop_addr[8]
+      : cop_u/cop_addr[8]
+      : i_5/cop_addr[8]
+      : i_5/dmem_read_address[8]
+      : pipe_u/dmem_read_address[8]
+      : pipe_u/i_1/dmem_read_address[8]
+      : pipe_u/i_1/wb_read_data_o[8]
+      : pipe_u/wb_stage/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[8]
+      : pipe_u/wb_stage/dmem_read_data_i[8]
+      : pipe_u/dmem_read_data_temp[8]
+      : i_5/dmem_read_data_temp[8]
+      : i_5/I222[8]
+      : cop_u/cop_rdata[8]
+      : cop_u/i_7/cop_rdata[8]
+      : i_5/dmem_read_address[4]
+      : pipe_u/dmem_read_address[4]
+      : pipe_u/i_1/dmem_read_address[4]
+      : i_5/dmem_read_address[8]
+      : pipe_u/dmem_read_address[8]
+      : pipe_u/i_1/dmem_read_address[8]
+      : pipe_u/i_1/wb_read_data_o[8]
+      : pipe_u/wb_stage/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[8]
+      : pipe_u/wb_stage/dmem_read_data_i[8]
+      : pipe_u/dmem_read_data_temp[8]
+      : i_5/dmem_read_data_temp[8]
+      : i_5/I222[8]
+      : cop_u/cop_rdata[8]
+      : cop_u/i_7/cop_rdata[8]
+      : i_5/dmem_read_address[5]
+      : pipe_u/dmem_read_address[5]
+      : pipe_u/i_1/dmem_read_address[5]
+      : cop_u/i_7/cop_addr[6]
+      : cop_u/cop_addr[6]
+      : i_5/cop_addr[6]
+      : i_5/dmem_read_address[6]
+      : pipe_u/dmem_read_address[6]
+      : pipe_u/i_1/dmem_read_address[6]
+      : pipe_u/i_1/wb_read_data_o[2]
+      : pipe_u/wb_stage/wb_read_data_o[2]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[2]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[2]
+      : pipe_u/wb_stage/dmem_read_data_i[2]
+      : pipe_u/dmem_read_data_temp[2]
+      : i_5/dmem_read_data_temp[2]
+      : i_5/I222[2]
+      : cop_u/cop_rdata[2]
+      : cop_u/i_7/cop_rdata[2]
+      : i_5/dmem_read_address[22]
+      : pipe_u/dmem_read_address[30]
+      : pipe_u/i_1/dmem_read_address[22]
+      : pipe_u/i_1/wb_read_data_o[28]
+      : pipe_u/wb_stage/wb_read_data_o[28]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[28]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[23]
+      : pipe_u/wb_stage/dmem_read_data_i[23]
+      : pipe_u/dmem_read_data_temp[23]
+      : i_5/dmem_read_data_temp[23]
+      : i_5/I222[23]
+      : cop_u/cop_rdata[23]
+      : cop_u/i_7/cop_rdata[23]
+      : cop_u/i_7/cop_addr[8]
+      : cop_u/cop_addr[8]
+      : i_5/cop_addr[8]
+      : pipe_u/i_1/wb_read_data_o[8]
+      : pipe_u/wb_stage/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[8]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[8]
+      : pipe_u/wb_stage/dmem_read_data_i[8]
+      : pipe_u/dmem_read_data_temp[8]
+      : i_5/dmem_read_data_temp[8]
+      : i_5/I222[8]
+      : cop_u/cop_rdata[8]
+      : cop_u/i_7/cop_rdata[8]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[23]
+      : pipe_u/wb_stage/dmem_read_data_i[23]
+      : pipe_u/dmem_read_data_temp[23]
+      : i_5/dmem_read_data_temp[23]
+      : i_5/I222[23]
+      : cop_u/cop_rdata[23]
+      : cop_u/i_7/cop_rdata[23]
+      : pipe_u/i_1/wb_read_data_o[5]
+      : pipe_u/wb_stage/wb_read_data_o[5]
+      : pipe_u/wb_stage/i_3/wb_read_data_o[5]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[5]
+      : pipe_u/wb_stage/dmem_read_data_i[5]
+      : pipe_u/dmem_read_data_temp[5]
+      : i_5/dmem_read_data_temp[5]
+      : i_5/I222[5]
+      : cop_u/cop_rdata[5]
+      : cop_u/i_7/cop_rdata[5]
+      : pipe_u/wb_stage/i_3/dmem_read_data_i[23]
+      : pipe_u/wb_stage/dmem_read_data_i[23]
+      : pipe_u/dmem_read_data_temp[23]
+      : i_5/dmem_read_data_temp[23]
+      : i_5/I222[23]
+      : cop_u/cop_rdata[23]
+      : cop_u/i_7/cop_rdata[23]
+      : i_5/dmem_read_address[6]
+      : pipe_u/dmem_read_address[6]
+      : pipe_u/i_1/dmem_read_address[6]
+      : cop_u/i_7/cop_addr[5]
+      : cop_u/cop_addr[5]
+      : i_5/cop_addr[5]
+      : cop_u/i_7/cop_addr[4]
+      : cop_u/cop_addr[4]
+      : i_5/cop_addr[4]
+      : cop_u/i_7/cop_addr[8]
+      : cop_u/cop_addr[8]
+      : i_5/cop_addr[8]
+      : cop_u/i_7/cop_addr[1]
+      : cop_u/cop_addr[1]
+      : i_5/cop_addr[1]
+      : i_5/dmem_read_address[1]
+      : pipe_u/dmem_read_address[1]
+      : pipe_u/i_1/dmem_read_address[1]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:02:20 . Memory (MB): peak = 1938.348 ; gain = 1207.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|weight_bram: | ram_reg            | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|bias_bram:   | ram_reg            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|cop_u        | u_out_bram/ram_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|cop_u        | u_in_bram/ram_reg  | 256 x 32(NO_CHANGE)    | W |   | 256 x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 1      | 
++-------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+---------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives        | 
++------------+---------------+-----------+----------------------+-------------------+
+|top_fpga    | DMEM/dmem_reg | Implied   | 16 K x 32            | RAM128X1D x 4096  | 
++------------+---------------+-----------+----------------------+-------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance IMEM/instr_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_wt_bram/ram_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_bias_bram/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_out_bram/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance cop_u/u_in_bram/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:23 ; elapsed = 00:02:33 . Memory (MB): peak = 2121.594 ; gain = 1390.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:28 ; elapsed = 00:02:37 . Memory (MB): peak = 2132.957 ; gain = 1402.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:28 ; elapsed = 00:02:38 . Memory (MB): peak = 2132.957 ; gain = 1402.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 2132.957 ; gain = 1402.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 2132.957 ; gain = 1402.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 2152.789 ; gain = 1421.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 2152.789 ; gain = 1421.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|coprocessor_top | C+D+A*B+CARRYIN | 5      | 15     | 15     | 15     | 15     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |  1756|
+|3     |DSP48E1   |     1|
+|4     |LUT1      |    54|
+|5     |LUT2      |  2791|
+|6     |LUT3      |  4823|
+|7     |LUT4      |  3764|
+|8     |LUT5      |   961|
+|9     |LUT6      |  5833|
+|10    |MUXF7     |   734|
+|11    |MUXF8     |   321|
+|12    |RAM128X1D |  4096|
+|13    |RAMB18E1  |     3|
+|16    |RAMB36E1  |    48|
+|64    |FDCE      |  6176|
+|65    |FDPE      |    16|
+|66    |FDRE      |   602|
+|67    |IBUF      |     3|
+|68    |OBUF      |    32|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:31 ; elapsed = 00:02:42 . Memory (MB): peak = 2152.789 ; gain = 1421.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 98 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:22 ; elapsed = 00:02:38 . Memory (MB): peak = 2152.789 ; gain = 1334.074
+Synthesis Optimization Complete : Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 2152.789 ; gain = 1421.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.440 . Memory (MB): peak = 2161.984 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6959 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Shubham/Downloads/benchmark/benchmark/constraints/nexys_a7.xdc]
+Finished Parsing XDC File [C:/Users/Shubham/Downloads/benchmark/benchmark/constraints/nexys_a7.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2175.125 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4096 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 4096 instances
+
+Synth Design complete | Checksum: 85bfdb1f
+INFO: [Common 17-83] Releasing license: Synthesis
+129 Infos, 117 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:45 ; elapsed = 00:03:00 . Memory (MB): peak = 2175.125 ; gain = 1650.238
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.827 . Memory (MB): peak = 2175.125 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2175.125 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Phase 1 Initialization | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.128 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.185 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.964 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 232d0333d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 8 inverters resulting in an inversion of 16 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 269babfbb
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Retarget | Checksum: 269babfbb
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 8 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1da72f4ad
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Constant propagation | Checksum: 1da72f4ad
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Phase 5 Sweep | Checksum: 26863f5fe
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Sweep | Checksum: 26863f5fe
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 26863f5fe
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2242.641 ; gain = 0.000
+BUFG optimization | Checksum: 26863f5fe
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 26863f5fe
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Shift Register Optimization | Checksum: 26863f5fe
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 26863f5fe
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Post Processing Netlist | Checksum: 26863f5fe
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 22dcbec4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 22dcbec4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Phase 9 Finalization | Checksum: 22dcbec4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2242.641 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               8  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 22dcbec4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2242.641 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-203] Number of nets are not same before and after processing of findDistanceFromSourceAndDest. Before: 442 After: 522
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 51 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 52 Total Ports: 102
+Number of Flops added for Enable Generation: 5
+
+Ending PowerOpt Patch Enables Task | Checksum: 12afdd34c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.323 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 12afdd34c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2324.676 ; gain = 82.035
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 12090610d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 12090610d
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2324.676 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 2324.676 ; gain = 149.551
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 42 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11e138c0e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 2420e35b6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 28cdc2897
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 28cdc2897
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 28cdc2897
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 33c9bf088
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 30f1ce359
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 30f1ce359
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 2162d5065
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 2162d5065
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:44 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 456 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 163 nets or LUTs. Breaked 0 LUT, combined 163 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            163  |                   163  |           0  |           1  |  00:00:01  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            163  |                   163  |           0  |           4  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2659ed32d
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:46 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 2d1f38cc3
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:47 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 2d1f38cc3
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:47 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 328d2f110
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:48 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2560bd9ce
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:56 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 308ddc457
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 267cc6692
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 2d4bd7b71
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:04 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 27c57e4f8
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 31d272933
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:07 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 31d272933
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:07 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 20bb079c8
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.972 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: c22207b0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2324.676 ; gain = 0.000
+INFO: [Place 46-33] Processed net cop_u/u_systolic/ROW_GEN[7].COL_GEN[6].u_pe/systolic_flush_reg, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 169050d62
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 20bb079c8
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:30 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.972. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2323cb421
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 2323cb421
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2323cb421
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:35 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2323cb421
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:35 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 2323cb421
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:35 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:35 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2d1234726
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:36 . Memory (MB): peak = 2324.676 ; gain = 0.000
+Ending Placer Task | Checksum: 2056ecb68
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:36 . Memory (MB): peak = 2324.676 ; gain = 0.000
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:58 ; elapsed = 00:01:40 . Memory (MB): peak = 2324.676 ; gain = 0.000
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9a38e781 ConstDB: 0 ShapeSum: b9638451 RouteDB: b1d25f96
+Post Restoration Checksum: NetGraph: ec5349e5 | NumContArr: cd238ee7 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 33ec8ce06
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:34 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 33ec8ce06
+
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:35 . Memory (MB): peak = 2324.676 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 33ec8ce06
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:36 . Memory (MB): peak = 2324.676 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1994e6de8
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:19 . Memory (MB): peak = 2359.266 ; gain = 34.590
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.959  | TNS=0.000  | WHS=-0.360 | THS=-12.181|
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 195d0bf35
+
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:27 . Memory (MB): peak = 2388.742 ; gain = 64.066
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000261131 %
+  Global Horizontal Routing Utilization  = 0.000213129 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 23760
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 23759
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 175978aff
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:28 . Memory (MB): peak = 2388.742 ; gain = 64.066
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 175978aff
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:29 . Memory (MB): peak = 2388.742 ; gain = 64.066
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 2e63c0293
+
+Time (s): cpu = 00:04:16 ; elapsed = 00:02:51 . Memory (MB): peak = 2509.383 ; gain = 184.707
+Phase 4 Initial Routing | Checksum: 2e63c0293
+
+Time (s): cpu = 00:04:16 ; elapsed = 00:02:51 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 3575
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.251  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 24505a412
+
+Time (s): cpu = 00:05:22 ; elapsed = 00:03:37 . Memory (MB): peak = 2509.383 ; gain = 184.707
+Phase 5 Rip-up And Reroute | Checksum: 24505a412
+
+Time (s): cpu = 00:05:22 ; elapsed = 00:03:37 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1eaeacc5a
+
+Time (s): cpu = 00:05:26 ; elapsed = 00:03:39 . Memory (MB): peak = 2509.383 ; gain = 184.707
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.355  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Delay CleanUp | Checksum: 1eaeacc5a
+
+Time (s): cpu = 00:05:26 ; elapsed = 00:03:40 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1eaeacc5a
+
+Time (s): cpu = 00:05:26 ; elapsed = 00:03:40 . Memory (MB): peak = 2509.383 ; gain = 184.707
+Phase 6 Delay and Skew Optimization | Checksum: 1eaeacc5a
+
+Time (s): cpu = 00:05:27 ; elapsed = 00:03:40 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.355  | TNS=0.000  | WHS=0.048  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 260a66c95
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:43 . Memory (MB): peak = 2509.383 ; gain = 184.707
+Phase 7 Post Hold Fix | Checksum: 260a66c95
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:43 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 15.9255 %
+  Global Horizontal Routing Utilization  = 16.2321 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 260a66c95
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:43 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 260a66c95
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:44 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 29521350f
+
+Time (s): cpu = 00:05:44 ; elapsed = 00:03:54 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 29521350f
+
+Time (s): cpu = 00:05:44 ; elapsed = 00:03:54 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.355  | TNS=0.000  | WHS=0.048  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 29521350f
+
+Time (s): cpu = 00:05:45 ; elapsed = 00:03:54 . Memory (MB): peak = 2509.383 ; gain = 184.707
+Total Elapsed time in route_design: 234.437 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 269a19f0c
+
+Time (s): cpu = 00:05:45 ; elapsed = 00:03:55 . Memory (MB): peak = 2509.383 ; gain = 184.707
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 269a19f0c
+
+Time (s): cpu = 00:05:46 ; elapsed = 00:03:55 . Memory (MB): peak = 2509.383 ; gain = 184.707
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:05:47 ; elapsed = 00:03:56 . Memory (MB): peak = 2509.383 ; gain = 184.707
+# write_bitstream -force neurocore.bit
+Command: write_bitstream -force neurocore.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMDee/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./neurocore.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:50 ; elapsed = 00:01:13 . Memory (MB): peak = 2766.176 ; gain = 256.793
+# puts "SUCCESS: Bitstream written to neurocore.bit"
+SUCCESS: Bitstream written to neurocore.bit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 19:22:47 2026...

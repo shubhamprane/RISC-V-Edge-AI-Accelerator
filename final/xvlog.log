@@ -1,0 +1,43 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/coprocessor/argmax_unit.v" into library work
+INFO: [VRFC 10-311] analyzing module argmax_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/coprocessor/coprocessor_top.v" into library work
+INFO: [VRFC 10-311] analyzing module coprocessor_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/coprocessor/pe.v" into library work
+INFO: [VRFC 10-311] analyzing module pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/coprocessor/systolic_array.v" into library work
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/core/execute.v" into library work
+INFO: [VRFC 10-311] analyzing module execute
+INFO: [VRFC 10-311] analyzing module ex_mem_wb_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/core/IF_ID.v" into library work
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-311] analyzing module id_ex_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/core/memory.v" into library work
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/core/pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/core/wb.v" into library work
+INFO: [VRFC 10-311] analyzing module wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/memory/bias_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module bias_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/memory/input_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module input_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/memory/output_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module output_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/memory/weight_bram.v" into library work
+INFO: [VRFC 10-311] analyzing module weight_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/led_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module led_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/seven_seg_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/top_fpga.v" into library work
+INFO: [VRFC 10-311] analyzing module top_fpga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/uart_input_buffer.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_input_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/rtl/top/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dilip/testing/final/tb_bench.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_bench
